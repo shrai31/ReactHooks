@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BasicUseEffect from "./components/useEffect/BasicUseEffect";
+import ComponentC from "./components/context/ComponentC";
+// import { UserProvider } from "./components/context/UserContext";
+// import UseCallbackHooks from "./components/useCallbacks/UseCallbackHooks";
+import UseRefsHooks from "./components/useRef/UseRefsHooks";
+import UseStatewithObject from "./components/useState/UseStatewithObject";
+import { UserProvider } from "./components/context/UserContext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserProvider value="Nitin"> 
+        {/* <ChannelProvider value="HR"> */}
+        <ComponentC />
+        {/* <UseContextHooks /> */}
+        {/* </ChannelProvider> */}
+     </UserProvider>
     </div>
   );
 }
 
 export default App;
+
+{/* <UserProvider value="Himanshu">
+ <ChannelProvider value="HR">
+ <ComponentC />
+ <UseContextHooks />
+ </ChannelProvider>
+</UserProvider>; */}
+
+
+ 
